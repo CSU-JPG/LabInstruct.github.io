@@ -1,0 +1,32 @@
+[
+  {
+    "file": "alibaba.svg",
+    "source": "https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-svg/icons/alibaba-color.svg",
+    "bytes": 1407
+  },
+  {
+    "file": "bytedance.svg",
+    "source": "https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-svg/icons/bytedance-color.svg",
+    "bytes": 953
+  },
+  {
+    "file": "minimax.svg",
+    "source": "https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-svg/icons/minimax-color.svg",
+    "bytes": 1570
+  },
+  {
+    "file": "nvidia.svg",
+    "source": "https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-svg/icons/nvidia-color.svg",
+    "bytes": 1025
+  },
+  {
+    "file": "lightricks.svg",
+    "source": "https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-svg/icons/lightricks.svg",
+    "bytes": 1405
+  },
+  {
+    "file": "robbyant.png",
+    "source": "https://avatars.githubusercontent.com/u/212647524?v=4&s=96",
+    "bytes": 1824
+  }
+]
