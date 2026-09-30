@@ -184,7 +184,7 @@ p { text-wrap: pretty; }
 .score-notes { max-width: 1000px; font-size: 16px; color: var(--muted); margin-top: 22px; }
 .score-notes summary { color: var(--accent); font-weight: 600; cursor: pointer; }
 .score-notes p { line-height: 1.75; }
-.breakdown-section { margin-top: 48px; border-top: 1px solid var(--line); padding-top: 34px; }
+.breakdown-section { margin-top: 48px; padding-top: 34px; }
 .breakdown-section h3 { font-size: 29px; letter-spacing: -.02em; margin: 0 0 14px; }
 .breakdown-table thead th { min-width: 112px; }
 .breakdown-table th:first-child { min-width: 190px; text-align: left; }
@@ -205,14 +205,18 @@ p { text-wrap: pretty; }
 .instruction p { font-size: 17px; line-height: 1.75; margin: 14px 0 4px; max-width: none; text-wrap: wrap; }
 #reference-video { min-width: 0; grid-column: 1; }
 .task-context .reference { border-color: var(--accent); }
-.task-context .reference .caption { background: var(--second); }
+/* The gallery sits on a filled band now, so the reference caption uses the same
+   dark inset as the filter bar and the instruction panel rather than --second,
+   which was tuned against the page background. */
+.task-context .reference .caption { background: var(--bg); }
 .compare-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 22px 18px; }
 .media-error { padding: 12px; font-size: 14px; color: var(--muted); }
-/* The same soft edge as the hero: the fill holds through the middle and dissolves
-   into the page background over the first and last 140px. The end stops repeat the
-   fill at zero alpha rather than using `transparent`, which would drag the fade
-   through black. */
-#evaluation { background: linear-gradient(to bottom, oklch(34% .055 165 / 0), oklch(34% .055 165 / .82) 140px, oklch(34% .055 165 / .82) calc(100% - 140px), oklch(34% .055 165 / 0)); color: white; }
+/* Filled sections alternate with the page background down the page. The fill holds
+   through the middle and dissolves into the background over the first and last
+   140px, so neighbouring sections never meet at a hard edge. The end stops repeat
+   the fill at zero alpha rather than using `transparent`, which would drag the
+   fade through black. */
+#evaluation,#explore { background: linear-gradient(to bottom, oklch(34% .055 165 / 0), oklch(34% .055 165 / .82) 140px, oklch(34% .055 165 / .82) calc(100% - 140px), oklch(34% .055 165 / 0)); color: white; }
 #evaluation>.band { max-width: 1064px; margin-bottom: 28px; }
 .evaluation .abstract { max-width: none; color: oklch(87% .025 165); }
 .evaluation .teaser { margin: 0 0 34px; }
