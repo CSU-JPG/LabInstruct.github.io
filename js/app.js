@@ -129,10 +129,23 @@
     return card;
   }
 
+  // The looping laboratory clip behind the hero. It plays only while motion is
+  // welcome, and falls back to the green background if the file cannot be decoded.
+  const heroVideo = $('hero-bg');
+  function syncHero() {
+    if (!heroVideo.isConnected) return;
+    if (paused || document.hidden) heroVideo.pause();
+    else heroVideo.play().catch(() => {});
+  }
+  heroVideo.muted = true;
+  heroVideo.addEventListener('error', () => heroVideo.remove());
+  heroVideo.addEventListener('canplay', syncHero, {once: true});
+
   // Only the wall is auto-played; the comparison videos are click-to-play.
   function syncPlayback() {
     $('playback').textContent = paused ? 'Play previews' : 'Pause previews';
     $('playback').setAttribute('aria-pressed', String(paused));
+    syncHero();
     $('video-wall').querySelectorAll('video').forEach(video => {
       if (paused || document.hidden) video.pause();
       else {
