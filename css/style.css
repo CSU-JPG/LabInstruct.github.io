@@ -132,7 +132,6 @@ p { text-wrap: pretty; }
 .footnote { color: var(--muted); font-size: 14px; margin: 20px 0 0; }
 .footnote a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 #examples { padding-bottom: 60px; }
-#overview { border-top: 1px solid var(--line); }
 #overview>.band { max-width: 1064px; margin-bottom: 30px; }
 .abstract { max-width: 850px; margin: 0 auto 34px; font-size: 19px; line-height: 1.85; }
 #paper-abstract { max-width: none; text-align: justify; text-wrap: wrap; }
@@ -150,7 +149,6 @@ p { text-wrap: pretty; }
 .bar-fill { height: 100%; background: var(--accent); border-radius: 2px; }
 .bar-row b { font-weight: 550; text-align: right; }
 .section-description { color: var(--muted); font-size: 18px; margin: 0 0 28px; }
-#leaderboard { border-block: 1px solid var(--line); }
 .leaderboard-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 18px; margin-bottom: 20px; }
 .leaderboard-toolbar p { color: var(--muted); font-size: 14px; margin: 0; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -192,7 +190,6 @@ p { text-wrap: pretty; }
 .breakdown-table th:first-child { min-width: 190px; text-align: left; }
 .model-label { display: inline-flex; align-items: center; gap: 9px; text-align: left; white-space: nowrap; }
 .company-logo { width: 22px; height: 22px; object-fit: contain; flex: none; }
-#explore { border-top: 1px solid var(--line); }
 .filters { border: 1px solid var(--line); background: var(--bg); border-radius: 9px; padding: 10px 22px; }
 .filter-row { display: flex; align-items: center; gap: 20px; padding-block: 12px; }
 .filter-row+.filter-row { border-top: 1px solid var(--line); }
