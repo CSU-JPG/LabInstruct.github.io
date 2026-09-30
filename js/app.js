@@ -85,6 +85,12 @@
     video.loop = true;
     video.playsInline = true;
     video.controls = true;
+    // Hides the download entry in the native control strip (Chromium browsers)
+    // and the picture-in-picture button; the media itself stays stream-only.
+    video.setAttribute('controlsList', 'nodownload noremoteplayback');
+    video.disablePictureInPicture = true;
+    // Right-click "Save video as" is blocked too, so the two affordances match.
+    video.addEventListener('contextmenu', event => event.preventDefault());
     video.preload = 'metadata';
     video.setAttribute('aria-label', `${model === 'reference' ? 'Recorded reference' : data.models[model]}: ${sample.title}`);
     video.addEventListener('error', () => {
